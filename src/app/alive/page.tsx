@@ -30,13 +30,13 @@ export default function alivePage() {
                   rel="noopener"
                   className="text-sky-500 underline"
                 >
-                  日本管理センター株式会社
+                  株式会社JPMC
                 </a>
-                「一括借上げを前提にマンション経営を実現する経営代行会社（東証一部上場）」に加盟しており、加盟店は全国
+                「一括借上げを前提にマンション経営を実現する経営代行会社（東証プライム上場）」に加盟しており、加盟店は全国
                 <span className="text-red-500 font-bold text-lg">
                   約<span className="text-2xl">1400</span>社
                 </span>
-                （令和元年現在）あります。
+                （2022年1月末時点）あります。
               </p>
               <p>
                 代表含む全スタッフが現場の施工を行うため、8割型自社施工にて低コスト化を実現し、
