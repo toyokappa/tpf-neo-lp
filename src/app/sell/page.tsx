@@ -46,7 +46,16 @@ export default function SellPage() {
               href="tel:0276-58-5123"
               className="block text-white text-center font-bold bg-sky-500 px-4 py-4 rounded-lg shadow"
             >
-              <div className="text-3xl">(tel): 0276-58-5123</div>
+              <div className="flex items-center justify-center text-3xl">
+                <Image
+                  src="/icon-phone.svg"
+                  alt="phone"
+                  width={24}
+                  height={24}
+                  className="me-2 w-8"
+                />
+                <div>0276-58-5123</div>
+              </div>
               <div>までご連絡ください。</div>
             </a>
             <div className="text-gray-500 mt-2">

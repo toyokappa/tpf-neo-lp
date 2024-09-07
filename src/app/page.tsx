@@ -12,22 +12,9 @@ interface News {
 export default function Home() {
   const newsList = [
     {
-      id: 1,
-      title: "ホームページをOPENいたしました。",
-      postAt: "2015-11-07",
-    },
-    {
-      id: 2,
-      title: "【社名変更・移転のお知らせ】",
-      description:
-        "有限会社アーム建設から社名変更、及び本社移転をおこない、株式会社ティー・ピー・エフとなりました。今後とも宜しくお願い申し上げます。",
-      postAt: "2015-11-07",
-    },
-    {
-      id: 3,
-      title: "FM群馬 ラジオCMの放送が決定しました！",
-      description: `毎週日曜日　14：00～『山下達郎サンデーソングブック』内 (CMは14：54～)`,
-      postAt: "2019-06-04",
+      id: 5,
+      title: "ホームページをリニューアルしました！",
+      postAt: "2024-09-14",
     },
     {
       id: 4,
@@ -37,9 +24,22 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
       postAt: "2019-06-08",
     },
     {
-      id: 5,
-      title: "ホームページをリニューアルしました。",
-      postAt: "2024-09-14",
+      id: 3,
+      title: "FM群馬 ラジオCMの放送が決定しました！",
+      description: `毎週日曜日 14:00～『山下達郎サンデーソングブック』内 (CMは14:54～)`,
+      postAt: "2019-06-04",
+    },
+    {
+      id: 2,
+      title: "【社名変更・移転のお知らせ】",
+      description:
+        "有限会社アーム建設から社名変更、及び本社移転をおこない、株式会社ティー・ピー・エフとなりました。今後とも宜しくお願い申し上げます。",
+      postAt: "2015-11-07",
+    },
+    {
+      id: 1,
+      title: "ホームページをOPENいたしました。",
+      postAt: "2015-11-07",
     },
   ];
 
@@ -144,30 +144,30 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
         </section>
         <section className="px-5 py-10">
           <div className="text-2xl mb-8 text-center font-bold">会社概要</div>
-          <table className="mx-auto md:text-base text-sm  md:max-w-[640px]">
+          <table className="mx-auto md:text-base text-sm  md:max-w-[640px] mb-3">
             <tbody>
               <tr className="border-b border-gray-300">
-                <td className="py-6 md:w-48 w-32 align-top">名称</td>
-                <td className="py-6">株式会社 TPF NEO</td>
+                <td className="py-4 md:w-48 w-32 align-top">名称</td>
+                <td className="py-4">株式会社 TPF NEO</td>
               </tr>
               <tr className="border-b border-gray-300">
-                <td className="py-6 align-top">住所</td>
-                <td className="py-6">
+                <td className="py-4 align-top">住所</td>
+                <td className="py-4">
                   <p>〒370-0411</p>
                   <p>群馬県太田市亀岡町429-2</p>
                 </td>
               </tr>
               <tr className="border-b border-gray-300">
-                <td className="py-6 align-top">連絡先</td>
-                <td className="py-6">0276-58-5123</td>
+                <td className="py-4 align-top">連絡先</td>
+                <td className="py-4">0276-58-5123</td>
               </tr>
               <tr className="border-b border-gray-300">
-                <td className="py-6 align-top">代表者</td>
-                <td className="py-6">高野 紀幸</td>
+                <td className="py-4 align-top">代表者</td>
+                <td className="py-4">高野 紀幸</td>
               </tr>
               <tr className="border-b border-gray-300">
-                <td className="py-6 align-top">事業内容</td>
-                <td className="py-6">
+                <td className="py-4 align-top">事業内容</td>
+                <td className="py-4">
                   <p className="mb-3">
                     マンション・一戸建住宅・店舗のリフォーム工事全般の施工・監理
                   </p>
@@ -183,12 +183,12 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
                 </td>
               </tr>
               <tr className="border-b border-gray-300">
-                <td className="py-6 align-top">宅地物件取引業</td>
-                <td className="py-6">群馬県知事(1)第7673号</td>
+                <td className="py-4 align-top">宅地物件取引業</td>
+                <td className="py-4">群馬県知事(1)第7673号</td>
               </tr>
               <tr className="border-b border-gray-300">
-                <td className="py-6 align-top">建設業許可</td>
-                <td className="py-6">
+                <td className="py-4 align-top">建設業許可</td>
+                <td className="py-4">
                   <p>群馬県知事許可(般-2)</p>
                   <p>第24935号</p>
                 </td>
@@ -202,7 +202,25 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
               </tr>
             </tbody>
           </table>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3217.214764615135!2d139.3136445758989!3d36.258564572406584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601edee5b92062fd%3A0x5f7223a461bd575c!2z77yI5qCq77yJ44OG44Kj44O844O744OU44O844O744Ko44OV!5e0!3m2!1sja!2sjp!4v1725709014557!5m2!1sja!2sjp"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full max-w-[640px] mx-auto"
+          ></iframe>
         </section>
+      </div>
+      <div className="md:flex md:justify-end sticky bottom-0">
+        <Link
+          href="contact"
+          className="md:inline-block block text-sky-500 bg-white border border-sky-500 text-center font-bold px-4 py-4 md:rounded-lg shadow md:mb-3 md:me-3"
+        >
+          お問い合わせはこちら
+        </Link>
       </div>
     </main>
   );
