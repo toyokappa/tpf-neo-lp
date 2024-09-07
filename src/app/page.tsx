@@ -103,6 +103,18 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
             <p>
               一括借り上げを生かし、他社にはマネのできない収益のご提案をさせていただきます。
             </p>
+            <Link
+              href="#"
+              className="block text-white text-center font-bold bg-sky-500 rounded-lg px-4 py-4 mt-5 shadow"
+            >
+              アパート・マンションを売りたい方へ
+            </Link>
+            <Link
+              href="#"
+              className="block text-white text-center font-bold bg-sky-500 rounded-lg px-4 py-4 mt-5 shadow"
+            >
+              アパート・マンションを活用したい方へ
+            </Link>
           </div>
         </section>
         <section className="px-5 py-10 border-b border-gray-300">
