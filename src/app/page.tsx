@@ -97,10 +97,10 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
               アパート・マンションを売りたい方へ
             </Link>
             <Link
-              href="#"
+              href="/alive"
               className="block text-white text-center font-bold bg-sky-500 rounded-lg px-4 py-4 mt-5 shadow"
             >
-              アパート・マンションを活用したい方へ
+              アパート・マンションを活かしたい方へ
             </Link>
           </div>
         </section>
