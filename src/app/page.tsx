@@ -1,6 +1,53 @@
 import Image from "next/image";
+import Link from "next/link";
+
+interface News {
+  id: number;
+  title: string;
+  description?: string;
+  postAt: string;
+  link?: string;
+}
 
 export default function Home() {
+  const newsList = [
+    {
+      id: 1,
+      title: "WebサイトをOPENいたしました。",
+      postAt: "2015-11-07",
+    },
+    {
+      id: 2,
+      title: "【社名変更・移転のお知らせ】",
+      description:
+        "有限会社アーム建設から社名変更、及び本社移転をおこない、株式会社ティー・ピー・エフとなりました。今後とも宜しくお願い申し上げます。",
+      postAt: "2015-11-07",
+    },
+    {
+      id: 3,
+      title: "FM群馬 ラジオCMの放送が決定しました！",
+      description: `毎週日曜日　14：00～『山下達郎サンデーソングブック』内 (CMは14：54～)`,
+      postAt: "2019-06-04",
+    },
+    {
+      id: 4,
+      title: "FM群馬 ラジオ出演が決定しました！",
+      description: `6/19水曜日 11時30分～11時55分
+FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさんと対談をさせていただくことになりました。`,
+      postAt: "2019-06-08",
+    },
+    {
+      id: 5,
+      title: "Webサイトをリニューアルしました。",
+      postAt: "2024-09-14",
+    },
+  ];
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("ja-JP");
+  };
+
   return (
     <>
       <header className="w-full py-3 border-b-4  border-sky-500">
@@ -26,6 +73,44 @@ export default function Home() {
         />
       </section>
       <div className="container mx-auto">
+        <section className="px-5 py-10 border-b border-gray-300">
+          <div className="text-2xl mb-8 text-center">新着情報</div>
+          <div className="px-4 rounded-lg border border-gray-300 shadow-lg md:max-w-[800px] mx-auto">
+            {newsList &&
+              newsList.map((news: News) => (
+                <div
+                  className="w-full py-3 border-b border-gray-300 last:border-none"
+                  key={news.id}
+                >
+                  <div className="text-sm text-gray-400 mb-1">
+                    {formatDate(news.postAt)}
+                  </div>
+                  {news.link ? (
+                    <>
+                      <Link
+                        href={news.link}
+                        target="_blank"
+                        rel="noopener"
+                        className="font-bold"
+                      >
+                        {news.title}
+                      </Link>
+                      <pre className="text-sm text-gray-500 mt-1 whitespace-pre-wrap">
+                        {news.description}
+                      </pre>
+                    </>
+                  ) : (
+                    <>
+                      <div className="font-bold">{news.title}</div>
+                      <pre className="text-sm text-gray-500 mt-1 whitespace-pre-wrap">
+                        {news.description}
+                      </pre>
+                    </>
+                  )}
+                </div>
+              ))}
+          </div>
+        </section>
         <section className="px-5 py-10">
           <div className="text-2xl mb-8 text-center">会社概要</div>
           <table className="mx-auto md:text-base text-sm">
