@@ -14,7 +14,7 @@ export default function Home() {
     {
       id: 5,
       title: "ホームページをリニューアルしました！",
-      postAt: "2024-09-14",
+      postAt: "2024-09-7",
     },
     {
       id: 4,
