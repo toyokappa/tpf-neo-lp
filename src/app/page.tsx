@@ -74,7 +74,7 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
       </section>
       <div className="container mx-auto">
         <section className="px-5 py-10 border-b border-gray-300">
-          <div className="text-2xl mb-8 text-center">ご挨拶</div>
+          <div className="text-2xl mb-8 text-center font-bold">ご挨拶</div>
 
           <div className="md:max-w-[640px] mx-auto">
             <p>弊社ホームページをご覧いただきありがとうございます。</p>
@@ -84,12 +84,21 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
             <p>
               弊社は仕事の面では、困っておりません。そのため、皆さまがご納得いただいた場合のみ当社にお任せください。
             </p>
-            <p>
+            <p className="mb-5">
               ご自身の利を優先したうえで弊社の提案にご納得いただくことができなかったときは、遠慮なくお断りください。
             </p>
 
             <p>
-              弊社は、日本管理センター株式会社（東証一部上場　証券コード3276）加盟店としての
+              弊社は、
+              <a
+                href="https://www.jpmc.jp/"
+                target="_blank"
+                rel="noopener"
+                className="text-sky-500 underline"
+              >
+                日本管理センター株式会社
+              </a>
+              （東証一部上場　証券コード3276）加盟店としての
             </p>
             <p>
               一括借り上げを生かし、他社にはマネのできない収益のご提案をさせていただきます。
@@ -97,7 +106,7 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
           </div>
         </section>
         <section className="px-5 py-10 border-b border-gray-300">
-          <div className="text-2xl mb-8 text-center">新着情報</div>
+          <div className="text-2xl mb-8 text-center font-bold">新着情報</div>
           <div className="px-4 rounded-lg border border-gray-300 shadow-lg md:max-w-[640px] mx-auto">
             {newsList &&
               newsList.map((news: News) => (
@@ -135,7 +144,7 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
           </div>
         </section>
         <section className="px-5 py-10">
-          <div className="text-2xl mb-8 text-center">会社概要</div>
+          <div className="text-2xl mb-8 text-center font-bold">会社概要</div>
           <table className="mx-auto md:text-base text-sm  md:max-w-[640px]">
             <tbody>
               <tr className="border-b border-gray-300">
@@ -185,7 +194,7 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
                   <p>第24935号</p>
                 </td>
               </tr>
-              <tr className="border-b border-gray-300">
+              <tr>
                 <td className="py-6 align-top">古物商許可</td>
                 <td className="py-6">
                   <p>群馬県公安委員会</p>
