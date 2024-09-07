@@ -49,27 +49,14 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
   };
 
   return (
-    <>
-      <header className="w-full py-3 border-b-4  border-sky-500">
-        <div className="md:flex items-center md:text-right text-center container mx-auto">
-          <div className="text-xl font-bold md:mb-0 mb-3">
-            (logo) 株式会社 TPF NEO
-          </div>
-          <a
-            href="tel:0276-58-5123"
-            className="ms-auto px-4 py-2 bg-sky-500 text-white font-bold rounded-lg shadow"
-          >
-            (tel): 0276-58-5123
-          </a>
-        </div>
-      </header>
-      <section className="hero">
+    <main>
+      <section className="border-b border-gray-300">
         <Image
           src="/hero.jpg"
           alt="hero"
           width={1920}
           height={1080}
-          className="w-full md:aspect-auto aspect-video object-cover boject-center"
+          className="w-full md:aspect-auto aspect-video object-cover object-center"
         />
       </section>
       <div className="container mx-auto">
@@ -104,7 +91,7 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
               一括借り上げを生かし、他社にはマネのできない収益のご提案をさせていただきます。
             </p>
             <Link
-              href="#"
+              href="/sell"
               className="block text-white text-center font-bold bg-sky-500 rounded-lg px-4 py-4 mt-5 shadow"
             >
               アパート・マンションを売りたい方へ
@@ -217,13 +204,6 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
           </table>
         </section>
       </div>
-      <footer className="w-full py-3 bg-sky-500 text-white">
-        <div className="container mx-auto">
-          <div className="text-xs font-bold text-center">
-            &copy; 2024 TPF NEO Co.,Ltd.
-          </div>
-        </div>
-      </footer>
-    </>
+    </main>
   );
 }
