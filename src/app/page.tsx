@@ -1,79 +1,12 @@
+import { getNewsList } from "@/lib/microcms";
+import { formatDate } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { News } from "./types";
 
-interface News {
-  id: number;
-  title: string;
-  description?: string;
-  postAt: string;
-  link?: string;
-}
-
-export default function Home() {
-  const newsList = [
-    {
-      id: 6,
-      title: "ホームページをリニューアルしました！",
-      postAt: "2024-09-07",
-    },
-    {
-      id: 6,
-      title: "株式会社 TPF NEOはレンタカー事業を開始しました。",
-      description: "レンタカー業許可を取得しレンタカー事業を開始しました。",
-      postAt: "2023-02-27",
-    },
-    {
-      id: 6,
-      title: "株式会社 TPF NEOが宅地建物取引業者の免許を取得しました。",
-      postAt: "2020-05-11",
-    },
-    {
-      id: 6,
-      title: "株式会社ティー・ピー・エフを黒字解散/ハッピーリタイアしました。",
-      postAt: "2020-04-01",
-    },
-    {
-      id: 5,
-      title: "株式会社 TPF NEOを設立しました。",
-      description: `TPF Groupは古物商許可証を取得し、子会社として中古自動車販売事業の株式会社 TPF NEOを設立しました。`,
-      postAt: "2018-07-02",
-    },
-    {
-      id: 4,
-      title: "FM群馬 ラジオ出演が決定しました！",
-      description: `6/19水曜日 11時30分～11時55分
-FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさんと対談をさせていただくことになりました。`,
-      postAt: "2019-06-08",
-    },
-    {
-      id: 3,
-      title: "FM群馬 ラジオCMの放送が決定しました！",
-      description: `毎週日曜日 14:00～『山下達郎サンデーソングブック』内 (CMは14:54～)`,
-      postAt: "2019-06-04",
-    },
-    {
-      id: 3,
-      title: "【社名変更・移転のお知らせ】",
-      description:
-        "有限会社アーム建設から社名変更、及び本社移転をおこない、株式会社ティー・ピー・エフとなりました。今後とも宜しくお願い申し上げます。",
-      postAt: "2015-11-07",
-    },
-    {
-      id: 2,
-      title: "ホームページをOPENいたしました。",
-      postAt: "2015-11-07",
-    },
-    {
-      id: 1,
-      title: "有限会社アーム建設を設立しました。",
-      postAt: "2005-12-07",
-    },
-  ];
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("ja-JP");
-  };
+export default async function Home() {
+  const data = await getNewsList(5);
+  const newsList = data.contents;
 
   return (
     <main>
@@ -89,7 +22,6 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
       <div className="container mx-auto">
         <section className="px-5 py-10 border-b border-gray-300">
           <div className="text-2xl mb-8 text-center font-bold">ご挨拶</div>
-
           <div className="md:max-w-[640px] mx-auto">
             <p>弊社ホームページをご覧いただきありがとうございます。</p>
             <p>
@@ -167,6 +99,11 @@ FM群馬 busi-neta!番組内で弊社代表髙野がアンカンミンカンさ�
                   )}
                 </div>
               ))}
+            {data.totalCount > 5 && (
+              <Link href="/news" className="block text-center font-bold py-4">
+                もっと見る
+              </Link>
+            )}
           </div>
         </section>
         <section className="px-5 py-10">
